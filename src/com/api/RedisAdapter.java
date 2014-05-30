@@ -59,7 +59,6 @@ public class RedisAdapter {
 		Jedis jedis = null;
 		jedis = pool.getResource();
 		Pipeline pipeline = jedis.pipelined();
-		
 		try {
 			for(int i = 0 ; i < num ; i++){
 				jedis.rpop(queueName.getBytes());

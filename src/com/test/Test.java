@@ -15,6 +15,7 @@ public class Test {
 		System.out.println(System.nanoTime() - time);
 		Long len = adapter.getResource().llen("mytest".getBytes());
 		
+		
 		User ua = (User) adapter.getQueueElement("mytest");
 		System.out.println(ua.getId());
 		System.out.println(len);
